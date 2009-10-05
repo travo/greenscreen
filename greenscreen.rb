@@ -13,9 +13,7 @@ get '/' do
 
   servers.each do |server|
     xml = REXML::Document.new(open(server["url"], :http_basic_authentication=>[server["username"], server["password"]]))
-    projects = xml.elements["//Projects"]
-    
-    projects.each do |project|
+    xml.elements.each("Projects/Project") do |project|
       monitored_project = MonitoredProject.new(project)
       if server["jobs"]
         if server["jobs"].detect {|job| job == monitored_project.name}
