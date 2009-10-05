@@ -16,7 +16,7 @@ Or download the project by clicking on the 'download' link on this page:
 Once you've got GreenScreen on your machine, edit the config.yml file to add links to your build servers.  It contains instructions for how you can add the.  GreenScreen has been tested with Hudson, but can be used with any continuous integration server that conforms to the multiple project summary reporting standard described here:
   http://confluence.public.thoughtworks.org/display/CI/Multiple+Project+Summary+Reporting+Standard
 
-This pretty much means that any of the flavours of cruise control should work too.
+This pretty much means that any of the flavours of cruise control should work too. To get it talking to Bamboo, try bamboozled: http://github.com/mdub/bamboozled
 
 Once you've got your configuration, you can start GreenScreen as follows:
   ruby greenscreen.rb
